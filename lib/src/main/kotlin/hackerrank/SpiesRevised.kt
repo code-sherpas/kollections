@@ -3,7 +3,7 @@
  */
 package hackerrank
 
-class Library {
+class SpiesRevised {
     fun someLibraryMethod(): Boolean {
         return true
     }

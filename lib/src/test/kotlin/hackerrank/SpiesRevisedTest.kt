@@ -6,9 +6,9 @@ package hackerrank
 import kotlin.test.Test
 import kotlin.test.assertTrue
 
-class LibraryTest {
+class SpiesRevisedTest {
     @Test fun someLibraryMethodReturnsTrue() {
-        val classUnderTest = Library()
+        val classUnderTest = SpiesRevised()
         assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'")
     }
 }

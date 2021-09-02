@@ -4,14 +4,17 @@
 package hackerrank
 
 fun main(args: Array<String>) {
-    SpiesRevised().execute().let {
+    SpiesRevised().execute(7).let {
         println(it.size)
         println(it.joinToString(separator = " "))
     }
 }
 
 class SpiesRevised {
-    fun execute(): List<Int> {
-        return listOf(435,345,1234)
+    fun execute(size: Int): List<Int> {
+        val result = mutableListOf<Int>()
+        for (i in 1..(size / 2 + 1) * 2 step 2) result.add(i)
+        for (i in 2..size step 2) result.add(i)
+        return result
     }
 }

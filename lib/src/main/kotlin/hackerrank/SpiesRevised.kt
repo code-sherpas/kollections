@@ -4,7 +4,7 @@
 package hackerrank
 
 class SpiesRevised {
-    fun someLibraryMethod(): Boolean {
-        return true
+    fun execute(): List<Int> {
+        return listOf()
     }
 }

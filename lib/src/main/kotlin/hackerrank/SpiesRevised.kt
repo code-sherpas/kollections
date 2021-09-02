@@ -3,8 +3,15 @@
  */
 package hackerrank
 
+fun main(args: Array<String>) {
+    SpiesRevised().execute().let {
+        println(it.size)
+        println(it.joinToString(separator = " "))
+    }
+}
+
 class SpiesRevised {
     fun execute(): List<Int> {
-        return listOf()
+        return listOf(435,345,1234)
     }
 }

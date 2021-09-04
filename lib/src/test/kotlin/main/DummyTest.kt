@@ -6,7 +6,7 @@ package main
 import kotlin.test.Test
 import kotlin.test.assertTrue
 
-class SpiesRevisedTest {
+class DummyTest {
     @Test fun someLibraryMethodReturnsTrue() {
         assertTrue(true, "someLibraryMethod should return 'true'")
     }

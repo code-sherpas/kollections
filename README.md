@@ -1,1 +1,1 @@
-# hackerrank
+# kotlin-data-structures

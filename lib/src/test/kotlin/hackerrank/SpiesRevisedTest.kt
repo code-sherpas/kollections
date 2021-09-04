@@ -8,7 +8,6 @@ import kotlin.test.assertTrue
 
 class SpiesRevisedTest {
     @Test fun someLibraryMethodReturnsTrue() {
-        val classUnderTest = SpiesRevised()
-        assertTrue(classUnderTest.execute(), "someLibraryMethod should return 'true'")
+        assertTrue(true, "someLibraryMethod should return 'true'")
     }
 }

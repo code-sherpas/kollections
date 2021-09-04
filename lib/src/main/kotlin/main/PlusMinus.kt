@@ -1,4 +1,4 @@
-package hackerrank
+package main
 
 /*
  * Complete the 'plusMinus' function below.

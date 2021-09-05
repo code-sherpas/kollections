@@ -1,39 +1,47 @@
 package main
 
-import org.assertj.core.api.Assertions.assertThat
+import org.assertj.core.api.Assertions
 import java.time.ZonedDateTime
 import kotlin.random.Random
 import kotlin.system.measureTimeMillis
-import kotlin.test.Ignore
 import kotlin.test.Test
 
 
 internal class StackTest {
 
-    @Ignore
-    @Test fun benchmark() {
+    @Test
+    fun `push & pop performance`() {
 
         val times = 20500000
+
+        val stack: Stack<Int> = Stack()
+
+        val implementationTime = measureTimeMillis {
+            repeat(10) {
+                repeat(times) {
+                    stack.push(Random(ZonedDateTime.now().nano).nextInt())
+                }
+                repeat(times) {
+                    stack.pop()
+                }
+            }
+        }
+
         val javaStack: java.util.Stack<Int> = java.util.Stack<Int>()
         val javaImplementationTime = measureTimeMillis {
-            repeat(times) {
-                javaStack.push(Random(ZonedDateTime.now().nano).nextInt())
-            }
-            repeat(times) {
-                javaStack.pop()
-            }
-        }
-
-        val stack: Stack<Int> = Stack<Int>()
-        val implementationTime = measureTimeMillis {
-            repeat(times) {
-                stack.push(Random(ZonedDateTime.now().nano).nextInt())
-            }
-            repeat(times) {
-                stack.pop()
+            repeat(10) {
+                repeat(times) {
+                    javaStack.push(Random(ZonedDateTime.now().nano).nextInt())
+                }
+                repeat(times) {
+                    javaStack.pop()
+                }
             }
         }
 
-        assertThat(implementationTime).isLessThan(javaImplementationTime)
+        if (implementationTime > javaImplementationTime * 0.95) Assertions.fail<Unit>(
+            "Own implementation time: $implementationTime ms\n" +
+                    "Java implementation time: $javaImplementationTime ms"
+        )
     }
 }

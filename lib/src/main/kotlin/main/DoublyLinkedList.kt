@@ -3,13 +3,10 @@ package main
 /**
  * https://en.wikipedia.org/wiki/Linked_list
  */
-class DoublyLinkedList<E>: MutableList<E> {
+class DoublyLinkedList<E>(node: E) : MutableList<E> {
 
     override val size: Int
         get() = TODO("Not yet implemented")
-
-    constructor(node: E) {
-    }
 
     override fun contains(element: E): Boolean {
         TODO("Not yet implemented")

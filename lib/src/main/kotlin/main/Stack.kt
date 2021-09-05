@@ -15,5 +15,5 @@ class Stack<E> {
 
     fun pop(): E = dynamicArray.removeAt(dynamicArray.lastIndex)
 
-    fun empty(): Boolean = dynamicArray.isEmpty()
+    fun isEmpty(): Boolean = dynamicArray.isEmpty()
 }

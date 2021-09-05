@@ -2,18 +2,13 @@ package main
 
 /**
  * https://en.wikipedia.org/wiki/Linked_list
- *
- * TODO: try to use delegation (https://kotlinlang.org/docs/delegation.html)
  */
-
-class SinglyLinkedList<E>: MutableList<E> {
-    private var internalDoublyLinkedList: DoublyLinkedList<E>
+class DoublyLinkedList<E>: MutableList<E> {
 
     override val size: Int
         get() = TODO("Not yet implemented")
 
     constructor(node: E) {
-        this.internalDoublyLinkedList = DoublyLinkedList(node)
     }
 
     override fun contains(element: E): Boolean {

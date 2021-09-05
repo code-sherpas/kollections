@@ -4,18 +4,16 @@ package main
  * https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
  */
 class Stack<E> {
+    private val dynamicArray = DynamicArray<E>()
+
     val size: Int
-        get() = TODO("Not yet implemented")
+        get() = dynamicArray.size
 
     fun push(element: E) {
-        TODO()
+        dynamicArray.add(element)
     }
 
-    fun pop(): E {
-        TODO()
-    }
+    fun pop(): E = dynamicArray.removeAt(dynamicArray.lastIndex)
 
-    fun empty(): Boolean {
-        TODO()
-    }
+    fun empty(): Boolean = dynamicArray.isEmpty()
 }

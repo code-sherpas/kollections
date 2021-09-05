@@ -1,0 +1,4 @@
+package main
+
+class SortedSet {
+}

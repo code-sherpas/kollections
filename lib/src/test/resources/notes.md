@@ -1,8 +1,12 @@
-To do:
+# To do:
 
 - Dynamic Array (with extra capacity at both ends)
 
-To review:
+# To decide
+
+- which stack implementation to use
+
+# To review:
 
 - https://en.wikipedia.org/wiki/List_of_data_structures
 - https://en.wikipedia.org/wiki/Collection_(abstract_data_type)

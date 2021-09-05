@@ -8,6 +8,8 @@
 
 # To review:
 
+- koltin map implementation
+
 - https://en.wikipedia.org/wiki/List_of_data_structures
 - https://en.wikipedia.org/wiki/Collection_(abstract_data_type)
 - https://en.wikipedia.org/wiki/Circular_buffer

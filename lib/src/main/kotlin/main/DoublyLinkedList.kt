@@ -3,10 +3,17 @@ package main
 /**
  * https://en.wikipedia.org/wiki/Linked_list
  */
-class DoublyLinkedList<E>(node: E) : MutableList<E> {
+class DoublyLinkedList<E> : MutableList<E> {
+
+    private var first: DoublyLinkedList<E>? = null
+    private var last: DoublyLinkedList<E>? = null
+
+    private var value: E? = null
+    private var previous: DoublyLinkedList<E>? = null
+    private var next: DoublyLinkedList<E>? = null
 
     override val size: Int
-        get() = TODO("Not yet implemented")
+        get() = 1 + (previous?.size ?: 0) + (next?.size ?: 0)
 
     override fun contains(element: E): Boolean {
         TODO("Not yet implemented")
@@ -37,7 +44,25 @@ class DoublyLinkedList<E>(node: E) : MutableList<E> {
     }
 
     override fun add(element: E): Boolean {
-        TODO("Not yet implemented")
+        when(value) {
+            null -> value = element
+            else -> {
+                next = DoublyLinkedList<E>().apply { value = element }
+                next!!.previous = this
+            }
+        }
+        return true
+    }
+
+    /**
+     * Adds the specified element to the beginning of this list.
+     *
+     * @return `true` because the list is always modified as the result of this operation.
+     */
+    fun addFirst(element: E): Boolean {
+        previous = DoublyLinkedList(element)
+        previous!!.next = this
+        return true
     }
 
     override fun add(index: Int, element: E) {

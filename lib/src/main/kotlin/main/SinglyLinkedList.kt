@@ -6,4 +6,4 @@ package main
  * TODO: try to use delegation (https://kotlinlang.org/docs/delegation.html)
  */
 
-class SinglyLinkedList<E>(node: E) : MutableList<E> by DoublyLinkedList(node)
+class SinglyLinkedList<E> : MutableList<E> by DoublyLinkedList()

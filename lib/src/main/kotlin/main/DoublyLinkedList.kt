@@ -16,7 +16,6 @@ class DoublyLinkedList<E> : MutableList<E> {
 
     override var size: Int = 0
         private set
-        get() = TODO()
 
     override fun contains(element: E): Boolean {
         TODO("Not yet implemented")
@@ -57,7 +56,7 @@ class DoublyLinkedList<E> : MutableList<E> {
                 }
             }
         }
-    }
+    }.also { incrementSize() }
 
     /**
      * Adds the specified element to the beginning of this list.
@@ -75,6 +74,10 @@ class DoublyLinkedList<E> : MutableList<E> {
                 }
             }
         }
+    }.also { incrementSize() }
+
+    private fun incrementSize() {
+        size++
     }
 
     private fun insertionOnEmptyList(newNode: Node<E>) {

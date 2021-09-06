@@ -29,6 +29,10 @@ class DoublyLinkedList<E> : MutableList<E> {
         TODO("Not yet implemented")
     }
 
+    fun getFirst(): E {
+        TODO("Not yet implemented")
+    }
+
     override fun indexOf(element: E): Int {
         val iterator: Iterator<IndexedValue<E>> = this.iterator().withIndex()
         var index = -1
@@ -67,7 +71,7 @@ class DoublyLinkedList<E> : MutableList<E> {
      *
      * @return `true` because the list is always modified as the result of this operation.
      */
-    fun addBeginning(element: E): Boolean = true.also {
+    fun addFirst(element: E): Boolean = true.also {
         Node(element).let { newNode: Node<E> ->
             when (this.isEmpty()) {
                 true -> insertionOnEmptyList(newNode)

@@ -30,7 +30,13 @@ class DoublyLinkedList<E> : MutableList<E> {
     }
 
     override fun indexOf(element: E): Int {
-        TODO("Not yet implemented")
+        val iterator: Iterator<IndexedValue<E>> = this.iterator().withIndex()
+        var index = -1
+        while (iterator.hasNext() && index == -1) {
+            val indexedValue: IndexedValue<E> = iterator.next()
+            if (indexedValue.value == element) index = indexedValue.index
+        }
+        return index
     }
 
     override fun isEmpty(): Boolean = size == 0

@@ -8,6 +8,10 @@
 
 - which stack implementation to use
 
+## About lists
+
+- review compare current implementation to AbstractMutableList
+
 # To review:
 
 - koltin map implementation

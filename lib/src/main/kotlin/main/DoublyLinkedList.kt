@@ -4,7 +4,7 @@ package main
 /**
  * https://en.wikipedia.org/wiki/Linked_list
  */
-class DoublyLinkedList<E> : MutableList<E> {
+class DoublyLinkedList<E> : AbstractMutableList<E>() {
 
     private var first: Node<E>? = null
     private var last: Node<E>? = null

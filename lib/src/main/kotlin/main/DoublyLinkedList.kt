@@ -48,12 +48,9 @@ class DoublyLinkedList<E> : MutableList<E> {
 
     override fun add(element: E): Boolean = true.also {
         Node(element).let { newNode: Node<E> ->
-            when (last) {
-                null -> {
-                    last = newNode
-                    first = last
-                }
-                else -> {
+            when (this.isEmpty()) {
+                true -> insertionOnEmptyList(newNode)
+                false -> {
                     last!!.next = newNode
                     newNode.previous = last
                     last = newNode
@@ -69,18 +66,20 @@ class DoublyLinkedList<E> : MutableList<E> {
      */
     fun addFirst(element: E): Boolean = true.also {
         Node(element).let { newNode: Node<E> ->
-            when (last) {
-                null -> {
-                    last = newNode
-                    first = last
-                }
-                else -> {
+            when (this.isEmpty()) {
+                true -> insertionOnEmptyList(newNode)
+                false -> {
                     newNode.next = first
                     first!!.previous = newNode
                     first = newNode
                 }
             }
         }
+    }
+
+    private fun insertionOnEmptyList(newNode: Node<E>) {
+        last = newNode
+        first = last
     }
 
     override fun add(index: Int, element: E) {

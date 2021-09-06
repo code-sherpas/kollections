@@ -6,11 +6,6 @@ package main
  */
 class DoublyLinkedList<E> : MutableList<E> {
 
-    private class Node<E>(private var value: E) {
-        var previous: Node<E>? = null
-        var next: Node<E>? = null
-    }
-
     private var first: Node<E>? = null
     private var last: Node<E>? = null
 
@@ -90,9 +85,7 @@ class DoublyLinkedList<E> : MutableList<E> {
         TODO("Not yet implemented")
     }
 
-    override fun listIterator(): MutableListIterator<E> {
-        TODO("Not yet implemented")
-    }
+    override fun listIterator(): MutableListIterator<E> = ListIterator()
 
     override fun listIterator(index: Int): MutableListIterator<E> {
         TODO("Not yet implemented")
@@ -129,5 +122,49 @@ class DoublyLinkedList<E> : MutableList<E> {
     private fun insertionOnEmptyList(newNode: Node<E>) {
         last = newNode
         first = last
+    }
+
+    private class Node<E>(private var value: E) {
+        var previous: Node<E>? = null
+        var next: Node<E>? = null
+    }
+
+    private inner class ListIterator : MutableListIterator<E> {
+
+        private var currentNode: Node<E>? = first
+
+        override fun hasPrevious(): Boolean {
+            TODO("Not yet implemented")
+        }
+
+        override fun nextIndex(): Int {
+            TODO("Not yet implemented")
+        }
+
+        override fun previous(): E {
+            TODO("Not yet implemented")
+        }
+
+        override fun previousIndex(): Int {
+            TODO("Not yet implemented")
+        }
+
+        override fun add(element: E) {
+            TODO("Not yet implemented")
+        }
+
+        override fun hasNext(): Boolean = currentNode?.next != null
+
+        override fun next(): E {
+            TODO("Not yet implemented")
+        }
+
+        override fun remove() {
+            TODO("Not yet implemented")
+        }
+
+        override fun set(element: E) {
+            TODO("Not yet implemented")
+        }
     }
 }

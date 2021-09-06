@@ -74,15 +74,6 @@ class DoublyLinkedList<E> : MutableList<E> {
         }
     }.also { incrementSize() }
 
-    private fun incrementSize() {
-        size++
-    }
-
-    private fun insertionOnEmptyList(newNode: Node<E>) {
-        last = newNode
-        first = last
-    }
-
     override fun add(index: Int, element: E) {
         TODO("Not yet implemented")
     }
@@ -129,5 +120,14 @@ class DoublyLinkedList<E> : MutableList<E> {
 
     override fun subList(fromIndex: Int, toIndex: Int): MutableList<E> {
         TODO("Not yet implemented")
+    }
+
+    private fun incrementSize() {
+        size++
+    }
+
+    private fun insertionOnEmptyList(newNode: Node<E>) {
+        last = newNode
+        first = last
     }
 }

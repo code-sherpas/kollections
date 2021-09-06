@@ -29,22 +29,6 @@ class DoublyLinkedList<E> : MutableList<E> {
         TODO("Not yet implemented")
     }
 
-    fun tail(): DoublyLinkedList<E> {
-        if(size < 2) TODO("Not yet implemented")
-
-        val tail = DoublyLinkedList<E>()
-        tail.first = this.first!!.next
-        tail.last = this.last
-        tail.size = this.size - 1
-        return tail
-    }
-
-    fun head(): E {
-        if(isEmpty()) throw NoSuchElementException()
-
-        return first!!.value
-    }
-
     override fun indexOf(element: E): Int {
         val iterator: Iterator<IndexedValue<E>> = this.iterator().withIndex()
         var index = -1

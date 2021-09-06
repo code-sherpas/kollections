@@ -33,9 +33,7 @@ class DoublyLinkedList<E> : MutableList<E> {
         TODO("Not yet implemented")
     }
 
-    override fun isEmpty(): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun isEmpty(): Boolean = size == 0
 
     override fun iterator(): MutableIterator<E> {
         TODO("Not yet implemented")

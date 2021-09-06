@@ -124,7 +124,9 @@ class DoublyLinkedList<E> : MutableList<E> {
         first = last
     }
 
-    private class Node<E>(private var value: E) {
+    private class Node<E>(value: E) {
+        var value: E = value
+            private set
         var previous: Node<E>? = null
         var next: Node<E>? = null
     }
@@ -132,22 +134,17 @@ class DoublyLinkedList<E> : MutableList<E> {
     private inner class ListIterator : MutableListIterator<E> {
 
         private var currentNode: Node<E>? = first
+        private var index: Int = 0
 
-        override fun hasPrevious(): Boolean {
-            TODO("Not yet implemented")
-        }
+        override fun hasPrevious(): Boolean = currentNode?.previous != null
 
-        override fun nextIndex(): Int {
-            TODO("Not yet implemented")
-        }
+        override fun nextIndex(): Int = index + 1
 
         override fun previous(): E {
             TODO("Not yet implemented")
         }
 
-        override fun previousIndex(): Int {
-            TODO("Not yet implemented")
-        }
+        override fun previousIndex(): Int = index - 1
 
         override fun add(element: E) {
             TODO("Not yet implemented")
@@ -156,7 +153,12 @@ class DoublyLinkedList<E> : MutableList<E> {
         override fun hasNext(): Boolean = currentNode?.next != null
 
         override fun next(): E {
-            TODO("Not yet implemented")
+            if (!hasNext()) throw NoSuchElementException()
+
+            val next = currentNode
+            currentNode = currentNode?.next
+            index++
+            return next!!.value
         }
 
         override fun remove() {

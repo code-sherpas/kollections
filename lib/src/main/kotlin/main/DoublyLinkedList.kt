@@ -63,7 +63,7 @@ class DoublyLinkedList<E> : MutableList<E> {
      *
      * @return `true` because the list is always modified as the result of this operation.
      */
-    fun addFirst(element: E): Boolean = true.also {
+    fun addBeginning(element: E): Boolean = true.also {
         Node(element).let { newNode: Node<E> ->
             when (this.isEmpty()) {
                 true -> insertionOnEmptyList(newNode)

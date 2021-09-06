@@ -4,7 +4,16 @@
 
 # To decide
 
+## About stacks
+
 - which stack implementation to use
+
+## About lists
+
+To include following?:
+
+- an operation for determining the first component (or the "head") of a list
+- an operation for referring to the list consisting of all the components of a list except for its first (this is called the "tail" of the list.)
 
 # To review:
 

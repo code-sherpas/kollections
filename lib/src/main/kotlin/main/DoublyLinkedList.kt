@@ -13,7 +13,12 @@ class DoublyLinkedList<E> : MutableList<E> {
         private set
 
     override fun contains(element: E): Boolean {
-        TODO("Not yet implemented")
+        val iterator: MutableIterator<E> = this.iterator()
+        var found = false
+        while (iterator.hasNext() && !found) {
+            if (iterator.next() == element) found = true
+        }
+        return found
     }
 
     override fun containsAll(elements: Collection<E>): Boolean {
@@ -141,7 +146,12 @@ class DoublyLinkedList<E> : MutableList<E> {
         override fun nextIndex(): Int = index + 1
 
         override fun previous(): E {
-            TODO("Not yet implemented")
+            if (!hasPrevious()) throw NoSuchElementException()
+
+            val value = currentNode!!.value
+            currentNode = currentNode?.previous
+            index--
+            return value
         }
 
         override fun previousIndex(): Int = index - 1
@@ -155,10 +165,10 @@ class DoublyLinkedList<E> : MutableList<E> {
         override fun next(): E {
             if (!hasNext()) throw NoSuchElementException()
 
-            val next = currentNode
+            val value = currentNode!!.value
             currentNode = currentNode?.next
             index++
-            return next!!.value
+            return value
         }
 
         override fun remove() {

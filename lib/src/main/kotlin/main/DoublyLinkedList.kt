@@ -12,40 +12,11 @@ class DoublyLinkedList<E> : AbstractMutableList<E>() {
     override var size: Int = 0
         private set
 
-    override fun contains(element: E): Boolean {
-        val iterator: MutableIterator<E> = this.iterator()
-        var found = false
-        while (iterator.hasNext() && !found) {
-            if (iterator.next() == element) found = true
-        }
-        return found
-    }
-
-    override fun containsAll(elements: Collection<E>): Boolean {
-        TODO("Not yet implemented")
-    }
-
     override fun get(index: Int): E {
         TODO("Not yet implemented")
     }
 
-    override fun indexOf(element: E): Int {
-        val iterator: Iterator<IndexedValue<E>> = this.iterator().withIndex()
-        var index = -1
-        while (iterator.hasNext() && index == -1) {
-            val indexedValue: IndexedValue<E> = iterator.next()
-            if (indexedValue.value == element) index = indexedValue.index
-        }
-        return index
-    }
-
-    override fun isEmpty(): Boolean = size == 0
-
     override fun iterator(): MutableIterator<E> {
-        TODO("Not yet implemented")
-    }
-
-    override fun lastIndexOf(element: E): Int {
         TODO("Not yet implemented")
     }
 

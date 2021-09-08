@@ -1,12 +1,15 @@
-# kollections
+# Kollections
 
-This project is led by Code Sherpas (https://www.code-sherpas.rocks/)
+This project is led by Code Sherpas ([www.code-sherpas.rocks](https://www.code-sherpas.rocks/), [LinkedIn](https://www.linkedin.com/company/code-sherpas))
 
-This is an open source project to fill a gap that Kotlin Standard Library currently has. This gap is the lack of common and basic data structures in Computer Science. This project has two goals:
+Kollections is a [Kotlin](https://kotlinlang.org/) open source library to fill the gap that currently exists in the [Kotlin Standard Library](https://kotlinlang.org/api/latest/jvm/stdlib/) regarding [data structures](https://en.wikipedia.org/wiki/Data_structure).
 
-- let everybody that want contribute to learn data structures
-- achieve a mature enough state in order to make Kotlin maintainers consider to include this project in the Kotlin Standard Library
+The final objective is to achieve a mature enough state in order to make Kotlin maintainers consider to include this project in the Kotlin Standard Library.
 
-For collaborating or getting more information, please go to our main slack channel: https://app.slack.com/client/TNL467FJQ/C02DSJCCV19
+For more information, please go to our [discussion forum](https://github.com/code-sherpas/kollections/discussions).
+
+## Would you like to become a contributor?
+
+Just leave a comment [here](https://github.com/code-sherpas/kollections/discussions/10) and we will add you to the contributors team.
 
 

@@ -1,6 +1,6 @@
 # Kollections
 
-This project is led by Code Sherpas ([www.code-sherpas.rocks](https://www.code-sherpas.rocks/), [Slack](code-sherpas.slack.com), [LinkedIn](https://www.linkedin.com/company/code-sherpas))
+This project is led by Code Sherpas ([www.code-sherpas.rocks](https://www.code-sherpas.rocks/), [Slack](https://code-sherpas.slack.com/), [LinkedIn](https://www.linkedin.com/company/code-sherpas))
 
 Kollections is a [Kotlin](https://kotlinlang.org/) open source library to fill the gap that currently exists in the [Kotlin Standard Library](https://kotlinlang.org/api/latest/jvm/stdlib/) regarding [data structures](https://en.wikipedia.org/wiki/Data_structure).
 

@@ -4,7 +4,13 @@
 
 # To decide
 
+## About stacks
+
 - which stack implementation to use
+
+## About lists
+
+- review compare current implementation to AbstractMutableList
 
 # To review:
 
@@ -14,6 +20,8 @@
 - koltin hash table implementation
 
 - kotlin serialization (Serializable)
+- RandomAccess
+- Cloneable
 
 - https://en.wikipedia.org/wiki/List_of_data_structures
 - https://en.wikipedia.org/wiki/Collection_(abstract_data_type)

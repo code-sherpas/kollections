@@ -4,23 +4,24 @@ package main
 /**
  * https://en.wikipedia.org/wiki/Linked_list
  */
-class DoublyLinkedList<E> : AbstractMutableList<E>() {
+class DoublyLinkedList<E> {
 
     private var first: Node<E>? = null
     private var last: Node<E>? = null
 
-    override var size: Int = 0
+    var size: Int = 0
         private set
 
-    override fun get(index: Int): E {
+    fun get(index: Int): E {
         TODO("Not yet implemented")
     }
 
-    override fun iterator(): MutableIterator<E> {
-        TODO("Not yet implemented")
-    }
+    fun isEmpty(): Boolean = size == 0
 
-    override fun add(element: E): Boolean = true.also {
+    /**
+     * Adds the specified element to the end of this list.
+     */
+    fun addLast(element: E) = Unit.also {
         Node(element).let { newNode: Node<E> ->
             when (this.isEmpty()) {
                 true -> insertionOnEmptyList(newNode)
@@ -35,10 +36,8 @@ class DoublyLinkedList<E> : AbstractMutableList<E>() {
 
     /**
      * Adds the specified element to the beginning of this list.
-     *
-     * @return `true` because the list is always modified as the result of this operation.
      */
-    fun addFirst(element: E): Boolean = true.also {
+    fun addFirst(element: E) = Unit.also {
         Node(element).let { newNode: Node<E> ->
             when (this.isEmpty()) {
                 true -> insertionOnEmptyList(newNode)
@@ -51,51 +50,26 @@ class DoublyLinkedList<E> : AbstractMutableList<E>() {
         }
     }.also { incrementSize() }
 
-    override fun add(index: Int, element: E) {
-        TODO("Not yet implemented")
+    fun tail(): DoublyLinkedList<E> {
+        TODO("Review implementation")
+        /*
+        if(size < 2) TODO("Not yet implemented")
+
+        val tail = DoublyLinkedList<E>()
+        tail.first = this.first!!.next
+        tail.last = this.last
+        tail.size = this.size - 1
+        return tail
+         */
     }
 
-    override fun addAll(index: Int, elements: Collection<E>): Boolean {
-        TODO("Not yet implemented")
-    }
+    fun head(): E {
+        if(isEmpty()) throw NoSuchElementException()
 
-    override fun addAll(elements: Collection<E>): Boolean {
-        TODO("Not yet implemented")
-    }
-
-    override fun clear() {
-        TODO("Not yet implemented")
+        return first!!.value
     }
 
     override fun listIterator(): MutableListIterator<E> = ListIterator()
-
-    override fun listIterator(index: Int): MutableListIterator<E> {
-        TODO("Not yet implemented")
-    }
-
-    override fun remove(element: E): Boolean {
-        TODO("Not yet implemented")
-    }
-
-    override fun removeAll(elements: Collection<E>): Boolean {
-        TODO("Not yet implemented")
-    }
-
-    override fun removeAt(index: Int): E {
-        TODO("Not yet implemented")
-    }
-
-    override fun retainAll(elements: Collection<E>): Boolean {
-        TODO("Not yet implemented")
-    }
-
-    override fun set(index: Int, element: E): E {
-        TODO("Not yet implemented")
-    }
-
-    override fun subList(fromIndex: Int, toIndex: Int): MutableList<E> {
-        TODO("Not yet implemented")
-    }
 
     private fun incrementSize() {
         size++

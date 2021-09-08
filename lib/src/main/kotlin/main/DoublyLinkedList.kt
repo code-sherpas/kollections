@@ -13,7 +13,12 @@ class DoublyLinkedList<E> {
         private set
 
     fun get(index: Int): E {
-        TODO("Not yet implemented")
+        if(index < 0 || index >= size) TODO()
+
+        return when (index) {
+            0 -> first!!.value
+            else -> TODO()
+        }
     }
 
     fun isEmpty(): Boolean = size == 0
@@ -69,8 +74,6 @@ class DoublyLinkedList<E> {
         return first!!.value
     }
 
-    override fun listIterator(): MutableListIterator<E> = ListIterator()
-
     private fun incrementSize() {
         size++
     }
@@ -87,47 +90,4 @@ class DoublyLinkedList<E> {
         var next: Node<E>? = null
     }
 
-    private inner class ListIterator : MutableListIterator<E> {
-
-        private var currentNode: Node<E>? = first
-        private var index: Int = 0
-
-        override fun hasPrevious(): Boolean = currentNode?.previous != null
-
-        override fun nextIndex(): Int = index + 1
-
-        override fun previous(): E {
-            if (!hasPrevious()) throw NoSuchElementException()
-
-            val value = currentNode!!.value
-            currentNode = currentNode?.previous
-            index--
-            return value
-        }
-
-        override fun previousIndex(): Int = index - 1
-
-        override fun add(element: E) {
-            TODO("Not yet implemented")
-        }
-
-        override fun hasNext(): Boolean = currentNode?.next != null
-
-        override fun next(): E {
-            if (!hasNext()) throw NoSuchElementException()
-
-            val value = currentNode!!.value
-            currentNode = currentNode?.next
-            index++
-            return value
-        }
-
-        override fun remove() {
-            TODO("Not yet implemented")
-        }
-
-        override fun set(element: E) {
-            TODO("Not yet implemented")
-        }
-    }
 }

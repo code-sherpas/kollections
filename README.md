@@ -12,4 +12,11 @@ For more information, please go to our [discussion forum](https://github.com/cod
 
 Just leave a comment [here](https://github.com/code-sherpas/kollections/discussions/10) and we will add you to the contributors team.
 
+# Related resources
+
+- https://www.bigocheatsheet.com/
+- https://en.wikipedia.org/wiki/Abstract_data_type
+- https://en.wikipedia.org/wiki/Collection_(abstract_data_type)
+- https://en.wikipedia.org/wiki/List_of_data_structures
+
 

@@ -3,11 +3,13 @@
  */
 package main
 
-import kotlin.test.Test
-import kotlin.test.assertTrue
+import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Test
+
 
 class DummyTest {
-    @Test fun someLibraryMethodReturnsTrue() {
-        assertTrue(true, "someLibraryMethod should return 'true'")
+    @Test
+    fun someLibraryMethodReturnsTrue() {
+        assertThat(true).isTrue
     }
 }

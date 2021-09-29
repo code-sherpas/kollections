@@ -10,7 +10,7 @@ For more information, please go to our [discussion forum](https://github.com/cod
 
 ## Would you like to become a contributor?
 
-Just leave a comment [here](https://github.com/code-sherpas/kollections/discussions/10) and we will add you to the contributors team.
+TBD
 
 # Related resources
 

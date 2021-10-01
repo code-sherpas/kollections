@@ -44,13 +44,13 @@
 
 ## :open_book: About The Project
 
-This project is led by [Code Sherpas](www.code-sherpas.rocks).
+This project is led by [Code Sherpas](www.code-sherpas.rocks). ✨
 
 **Kollections** is a [Kotlin](https://kotlinlang.org/) open source library to fill the gap that currently exists in the Kotlin Standard Library regarding data structures.
 
 The final objective is to achieve a mature enough state in order to make Kotlin maintainers consider to include this project in the Kotlin Standard Library.
 
-For more information, please go to our [discussion forum](https://github.com/code-sherpas/kollections/discussions).
+For more information, please go to our [discussion forum](https://github.com/code-sherpas/kollections/discussions). 🥇
 
 ### Built With
 

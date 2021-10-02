@@ -44,7 +44,7 @@
 
 ## :open_book: About The Project
 
-This project is led by [Code Sherpas](www.code-sherpas.rocks).
+This project is led by [Code Sherpas](https://www.code-sherpas.rocks).
 
 **Kollections** is a [Kotlin](https://kotlinlang.org/) open source library to fill the gap that currently exists in the Kotlin Standard Library regarding data structures.
 
@@ -55,9 +55,7 @@ For more information, please go to our [discussion forum](https://github.com/cod
 ### Built With
 
 - [Kotlin](https://kotlinlang.org)
-- [Spring Boot](https://spring.io/projects/spring-boot)
 - [Gradle](https://gradle.org)
-- [spotless](https://github.com/diffplug/spotless)
 - [JUnit](https://junit.org/junit5)
 
 
@@ -129,7 +127,7 @@ You are requested to follow the contribution guidelines specified in [CONTRIBUTI
 
 ## :page_facing_up: License
 
-Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more information.
+Distributed under the [MIT License](./LICENSE).
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

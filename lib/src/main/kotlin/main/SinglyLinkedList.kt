@@ -11,9 +11,11 @@ class SinglyLinkedList<E>{
             var next: Node?= null
     }
     
+
     //Head and tail node of the SLL
     var head : Node?= null
     var tail : Node?= null
+
     
     //Checks if SLL is empty 
     fun isEmpty(): Boolean{

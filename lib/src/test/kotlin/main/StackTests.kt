@@ -6,10 +6,13 @@ package main
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
+class CustomType<E>(item: E) {
+    private val elem = item
+}
 
 class StackTests {
     @Test
-    fun checkPushAddsElements() {
+    fun checkPushAddsInts() {
         val stack = Stack<Int>()
         assertThat(stack.size()).isEqualTo(0)
         assertThat(stack.isEmpty()).isTrue
@@ -22,4 +25,21 @@ class StackTests {
             assertThat(stack.isEmpty()).isFalse
         }
     }
+
+    @Test
+    fun checkPushAddsCustomDataType() {
+        val stack = Stack<CustomType<Int>>()
+        assertThat(stack.size()).isEqualTo(0)
+        assertThat(stack.isEmpty()).isTrue
+
+        for (i in 1..10) {
+            val randomInt = (0..10).random()
+            val newElem = CustomType(randomInt)
+            stack.push(newElem)
+            assertThat(stack.size()).isEqualTo(i)
+            assertThat(stack.peek()).isEqualTo(newElem)
+            assertThat(stack.isEmpty()).isFalse
+        }
+    }
+
 }

@@ -11,11 +11,30 @@ class SinglyLinkedList<E>{
             var next: Node?= null
     }
     
-    //Head node of the SLL
+
+    //Head and tail node of the SLL
     var head : Node?= null
+    var tail : Node?= null
+
     
     //Checks if SLL is empty 
     fun isEmpty(): Boolean{
         return head == null
+    }
+
+    //Insert element at the head of SLL
+    fun insertAtBeginning(element: E){
+        if (this.isEmpty()){
+            var newNode = Node(element)
+            this.head = newNode
+            this.tail = newNode
+            return
+        }
+        else{ 
+            var newNode = Node(element)
+            newNode.next = this.head
+            this.head = newNode
+            return
+        }
     }
 }

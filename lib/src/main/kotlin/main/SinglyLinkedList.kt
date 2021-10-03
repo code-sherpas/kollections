@@ -22,6 +22,7 @@ class SinglyLinkedList<E>{
         return head == null
     }
 
+
     //Returns value of head element
     fun head(): E?{
         return this.head?.value

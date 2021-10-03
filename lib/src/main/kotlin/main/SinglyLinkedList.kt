@@ -22,6 +22,12 @@ class SinglyLinkedList<E>{
         return head == null
     }
 
+
+    //Returns value of head element
+    fun head(): E?{
+        return this.head?.value
+    }
+
     //Insert element at the head of SLL
     fun insertAtBeginning(element: E){
         if (this.isEmpty()){

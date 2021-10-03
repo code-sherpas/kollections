@@ -28,6 +28,11 @@ class SinglyLinkedList<E>{
         return this.head?.value
     }
 
+    //Returns value of tail element
+    fun tail(): E?{
+        return this.tail?.value
+    }
+
     //Insert element at the head of SLL
     fun insertAtBeginning(element: E){
         if (this.isEmpty()){

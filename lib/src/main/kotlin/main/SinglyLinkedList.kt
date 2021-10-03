@@ -43,17 +43,4 @@ class SinglyLinkedList<E>{
             return
         }
     }
-
-    //Insert element at the end/tail of the SLL
-    fun insertAtEnd(element: E) {
-        if (this.isEmpty()){
-            var newNode = Node(value = element)
-            this.head = newNode
-            this.tail = newNode
-            return
-        }
-
-        tail?.next = Node(value = element)
-        tail = tail?.next
-    }
 }

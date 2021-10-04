@@ -61,4 +61,28 @@ class SinglyLinkedList<E>{
         tail?.next = Node(value = element)
         tail = tail?.next
     }
+
+    //remove node at particular position
+    fun deleteNode(position: Int) {
+        var node = head
+        var counter = 0
+        if (node != null) {
+            var prev : Node? = null
+            var next = node.next
+            while (counter != position){
+                prev = node
+                node = node?.next
+                counter++
+            }
+            if (prev != null) {
+                prev.next = next
+            } else {
+                head = next
+            }
+            node?.next = null
+            return
+        }
+        return
+
+    }
 }

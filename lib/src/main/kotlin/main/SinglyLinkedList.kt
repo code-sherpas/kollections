@@ -62,35 +62,27 @@ class SinglyLinkedList<E>{
         tail = tail?.next
     }
 
-    //get the node at a particular index (helper function)
-    fun nodeAtIndex(index: Int) : Node? {
-        if (index >= 0) {
-            var node = head
-            var i = index
-            while (node != null) {
-                if (i == 0) return node
-                i -= 1
-                node = node.next
-            }
-        }
-        return null
-    }
-
     //remove node at particular position
     fun deleteNode(position: Int) {
-        val node = nodeAtIndex(position)
+        var node = head
+        var counter = 0
         if (node != null) {
-            val prev = nodeAtIndex(position-1)
-            val next = node.next
+            var prev : Node? = null
+            var next = node.next
+            while (counter != position){
+                prev = node
+                node = node?.next
+                counter++
+            }
             if (prev != null) {
                 prev.next = next
             } else {
                 head = next
             }
-            node.next = null
+            node?.next = null
             return
         }
         return
-        
+
     }
 }

@@ -18,4 +18,17 @@ class SLLTest {
             assertThat(SLL.isEmpty()).isFalse
         }
     }
+
+    @Test
+    fun checkInsertAtEnd() {
+        var SLL: SinglyLinkedList<Int> = SinglyLinkedList<Int>()
+        assertThat(SLL.isEmpty()).isTrue
+        assertThat(SLL.head()).isEqualTo(null)
+        for (i in 1..10) {
+            val randomInt = (0..10).random()
+            SLL.insertAtEnd(randomInt)
+            assertThat(SLL.tail()).isEqualTo(randomInt)
+            assertThat(SLL.isEmpty()).isFalse
+        }
+    }
 }
